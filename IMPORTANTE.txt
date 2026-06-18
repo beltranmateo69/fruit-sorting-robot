@@ -1,0 +1,60 @@
+Al iniciar toca cargar el siguiente codigo en cmd:
+    venv\Scripts\activate
+    pip freeze > requirements.txt
+El cual permite que se active el entorno en python
+por lo tanto tambien se conforma asi:
+    venv/ librerias de python
+
+Librerias instaladas:
+    pip install ultralytics
+    pip install opencv-python
+    pip install torch torchvision
+    pip install matplotlib
+    pip install numpy
+    pip install jupyter
+
+Proceso de actualizacion en git y github:
+    git init ; inicializar git
+    git remote -v ; verificar conexion con github
+    git add . ; preparar y subir proyectos o archivos
+    git commit -m "proyecto 17 junio" ; crear un punto de guardado
+    git push -u origin master ; subir a github
+
+Estructura de la carpeta compartida:
+    esta caperta contiene todos los archivos que se vinculan entre linux
+    y windows de la siguiente manera:
+
+    datasets:Todos los datos usados para entrenar y probar IA
+    (imagenes, videos, etiquetas, datasets anotados)
+    NO GUARDAR CODIGO PYTHON, MODELOS ENTRENADOS, NI docs
+
+    docs: documentacion tecnica del proyecto diagramas, arquitectura
+    instrucciones, notas tecnicas
+
+    models: modelos de entrenamiento tambien archivos
+    de hugging face ej YOLO
+    guarda pesos YOLO, checkpoints, modelos descargados y afinados
+    best.pt, yolov8n.pt, fruit_detector.pt
+    NO GUARDAR DATASETS, NOTEBOOKS, NI DOCS
+
+    notebooks: anlaisis y pruebas en jupyter, pruebas visuales
+    analisis de imagenes, debugging IA, pruebas opencv
+    test_yolo.ipynb, camera_test.ipynb, dataset_analysis.ipynb
+    NO GUARDAR CODIGO FINAL DEL SISTEMA NI NODOS ROS2
+
+    scripts: codigo de python real del proyecto, detector de frutas
+    procesamiento de camara, logica IA, control principal
+    yolo_detector.py, camera_reader.py
+    NO GUARDA DATASETS NI NOTEBOOKS
+    
+    ros2_bridge: conexion IA-ros2 comunicacion entre python IA (ROS2), 
+    YOLO (TOPICS) y DETECCION BRAZO
+    publisher.py, ros_node.py, topic_manager.py
+
+    tests: pruebas, se valida deteccion, comunicacion, rendimiento
+    y estabilidad test_camera.py, test_ros.py
+
+    exports: modelos exportados, druit_detector.omnx, fruit_detector.engine
+
+
+
